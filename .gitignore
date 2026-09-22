@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+build/
+dist/
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# Model outputs
+output/
+outputs/
+runs/
+logs/
+
+# Data
+data/
+datasets/
+wg_datasets/
+
+# Pretrained weights
+*.pth
+*.ckpt
+lact_utils/ckpts/*.pth
+
+# Images / plots
+*.png
+*.jpg
+*.jpeg
+!lact_utils/ckpts/README.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Tensorboard
+events.out.tfevents.*
+
+# COLMAP
+sparse/
+database.db*
+
+# LaCT training assets (large / generated)
+*.pt
+lact_utils/train/weight/
+lact_utils/train/outputs/
+lact_utils/train/data_train/
+lact_utils/train/data_example/
+lact_utils/train/DL3DV-10K/
+
+# README figures
+!assets/*.png

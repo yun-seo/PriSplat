@@ -1,0 +1,17 @@
+torch>=2.0
+torchvision
+numpy
+tqdm
+Pillow
+imageio
+imageio-ffmpeg
+matplotlib
+einops
+omegaconf
+plyfile
+opencv-python
+pytorch-msssim
+torchmetrics
+lpips
+tensorboard
+scipy
