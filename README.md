@@ -2,12 +2,11 @@
 
 # PriSplat: Propagating Reliable Multi-view Information for Distractor-Free 3DGS
 
-**Yunseo Yang<sup>*</sup> · Youngho Yoon<sup>*</sup> · Kuk-Jin Yoon**  
-Visual Intelligence Lab., KAIST  
-**ECCV 2026**
+**Yunseo Yang<sup>*</sup>**, **Youngho Yoon<sup>*</sup>**, **and Kuk-Jin Yoon**  
 
-[![Code](https://img.shields.io/badge/Code-GitHub-181717?logo=github)](https://github.com/yun-seo/PriSplat)
-[![ECCV 2026](https://img.shields.io/badge/ECCV-2026-4B8BBE)](https://eccv.ecva.net/Conferences/2026/AcceptedPapers)
+Visual Intelligence Lab., KAIST
+
+**ECCV 2026**
 
 <sup>*</sup> Equal contribution
 
