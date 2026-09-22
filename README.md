@@ -279,4 +279,4 @@ PriSplat/
 
 ## Acknowledgements
 
-This codebase builds on [3D Gaussian Splatting](https://github.com/graphdeco-inria/gaussian-splatting) and uses the fast-weight formulation from [LaCT](https://github.com/tianweiy/LaCT). The distractor-mask component is related to prior work including [SpotLessSplats](https://spotlesssplats.github.io/) and [WildGaussians](https://wild-gaussians.github.io/). We evaluate on [NeRF On-the-go](https://rwn17.github.io/nerf-on-the-go/) and [RobustNeRF](https://robustnerf.github.io/).
+This codebase builds on [3D Gaussian Splatting](https://github.com/graphdeco-inria/gaussian-splatting), uses the fast-weight formulation from [LaCT](https://github.com/tianweiy/LaCT), and incorporates Fisher-based view scoring based on [FisherRF](https://github.com/JiangWenPL/FisherRF). The distractor-mask component is related to prior work including [SpotLessSplats](https://spotlesssplats.github.io/) and [WildGaussians](https://wild-gaussians.github.io/). We evaluate on [NeRF On-the-go](https://rwn17.github.io/nerf-on-the-go/) and [RobustNeRF](https://robustnerf.github.io/).
