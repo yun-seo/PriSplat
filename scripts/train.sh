@@ -47,7 +47,8 @@ python train.py \
     --densify_until_iter 20000 \
     --exposure_lr_init 0.005 \
     --lact_config lact_utils/config/lact_l24_d768_ttt2x.yaml \
-    --lact_ckpt lact_utils/ckpts/model_0003000.pth
+    --lact_ckpt lact_utils/ckpts/model_0003000.pth \
+    --train_test_exp
 
 # Render test views
 python render.py -m "${MODEL_DIR}"
