@@ -120,21 +120,26 @@ export DINOV3_REPO=$(pwd)/dinov3_repo
 export DINOV3_WEIGHTS=$(pwd)/utils/dinov3_vits16_pretrain_lvd1689m-08c60483.pth
 ```
 
-### 5. Harmonizer checkpoint
+### 5. Download the pretrained harmonizer
 
-PriSplat expects the pretrained harmonizer checkpoint at:
+The harmonizer checkpoint is available at **[Hugging Face](https://huggingface.co/yunseoyang/prisplat/tree/main/harmonizer_ckpt)**.
+
+Download it into the path expected by the released training configuration:
+
+```bash
+mkdir -p lact_utils/ckpts
+wget -O lact_utils/ckpts/model_0003000.pth \
+    https://huggingface.co/yunseoyang/prisplat/resolve/main/harmonizer_ckpt/model_0003000.pth
+```
+
+The default paths are:
 
 ```text
 lact_utils/ckpts/model_0003000.pth
-```
-
-The default configuration is:
-
-```text
 lact_utils/config/lact_l24_d768_ttt2x.yaml
 ```
 
-The checkpoint should be a `torch.save` dictionary with a `"model"` key containing the `LaCTLVSM` state dict.
+The checkpoint is a PyTorch dictionary with a `"model"` entry containing the `LaCTLVSM` state dict. **This is the backbone checkpoint required for PriSplat training**, not a scene-specific 3DGS checkpoint.
 
 ## Dataset
 
@@ -204,6 +209,21 @@ python train.py \
 | `--save_mask` | save estimated distractor masks every 1000 iterations |
 
 The full option list is defined in `arguments/__init__.py` and at the bottom of `train.py`.
+
+
+## Pretrained Scene Checkpoints and Results
+
+We release **30k-iteration 3DGS checkpoints** and **pre-rendered test results** for six scenes in our [Hugging Face repository](https://huggingface.co/yunseoyang/prisplat/tree/main/outputs).
+
+| Scene | 3DGS checkpoint | Test renders |
+| --- | --- | --- |
+| `mountain` | [Download](https://huggingface.co/yunseoyang/prisplat/resolve/main/outputs/mountain/chkpnt30000.pth) | [View](https://huggingface.co/yunseoyang/prisplat/tree/main/outputs/mountain/test/ours_30000/renders) |
+| `fountain` | [Download](https://huggingface.co/yunseoyang/prisplat/resolve/main/outputs/fountain/chkpnt30000.pth) | [View](https://huggingface.co/yunseoyang/prisplat/tree/main/outputs/fountain/test/ours_30000/renders) |
+| `corner` | [Download](https://huggingface.co/yunseoyang/prisplat/resolve/main/outputs/corner/chkpnt30000.pth) | [View](https://huggingface.co/yunseoyang/prisplat/tree/main/outputs/corner/test/ours_30000/renders) |
+| `patio` | [Download](https://huggingface.co/yunseoyang/prisplat/resolve/main/outputs/patio/chkpnt30000.pth) | [View](https://huggingface.co/yunseoyang/prisplat/tree/main/outputs/patio/test/ours_30000/renders) |
+| `spot` | [Download](https://huggingface.co/yunseoyang/prisplat/resolve/main/outputs/spot/chkpnt30000.pth) | [View](https://huggingface.co/yunseoyang/prisplat/tree/main/outputs/spot/test/ours_30000/renders) |
+| `patio-high` | [Download](https://huggingface.co/yunseoyang/prisplat/resolve/main/outputs/patio-high/chkpnt30000.pth) | [View](https://huggingface.co/yunseoyang/prisplat/tree/main/outputs/patio-high/test/ours_30000/renders) |
+
 
 ## Rendering and Evaluation
 
